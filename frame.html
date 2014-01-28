@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>New Thing</title>
+</head>
+<body>
+<h1 id="title">Path:</h1>
+<p id="body"></p>
+<p><a href="#!/p/product">#!/p/product</a></p>
+
+<script src="/jquery.js"></script>
+<script>
+  window.onhashchange = function (e) {
+    $('#body').text(e.newURL);
+    parent.postMessage(window.location.hash, 'http://localhost:4000');
+  }
+
+</script>
+</body>
+</html>
